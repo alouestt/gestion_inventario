@@ -70,3 +70,35 @@ def eliminar_producto():
                 return
             
         print("\nProducto no encontrado. Intente de nuevo.")
+
+def main():
+    while True:
+        print("\n===== SISTEMA DE GESTIÓN DE INVENTARIOS =====")
+        print("1. Registrar producto")
+        print("2. Listar productos")
+        print("3. Buscar producto")
+        print("4. Editar producto")
+        print("5. Eliminar producto")
+        print("6. Salir")
+
+        opcion = input("\nSeleccione una opción: ").strip()
+
+        match opcion:
+            case '1':
+                registrar_producto()
+            case '2':
+                listar_productos()
+            case '3':
+                buscar_producto()
+            case '4':
+                editar_producto()
+            case '5':
+                eliminar_producto()
+            case '6':
+                print("\nHa salido del sistema.")
+                break
+            case _:
+                print("\nOpción inválida.")
+                
+if __name__ == "__main__":
+    main()
